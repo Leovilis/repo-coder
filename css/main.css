@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---HEADER--- */
+
+header {
+  position: fixed;
+}
+li {
+  list-style: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.698);
+
+  width: 100vw;
+  height: 150px;
+  padding: 20px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 20px;
+}
+
+header nav img {
+  display: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  margin-left: 10px;
+  filter: grayscale(0%);
+
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+
+}
+
+header nav img:hover {
+  filter: grayscale(100%);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+
+}
+
+/* ---MAIN--- */
+
+.hero {
+  width: auto;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.423)),
+    url(../img/fondo.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero div h1 {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.hero div h1:hover {
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.612);
+}
+
+/* ---DISCOS---- */
+section h3 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+section h3:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.discos {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  grid-auto-rows: 200px;
+  gap: 15px; /* Genera margenes en grd*/
+}
+
+.grid-cont:hover {
+  transform: scale(1.03, 1.03);
+}
+
+.grid-cont {
+  position: relative;
+  transition: 2s;
+}
+
+.discos div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.grid-cont p {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.566);
+  width: 100%;
+  font-size: 18px;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+.grid-cont p a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ---GALERIA--- */
+
+.pic-container {
+  width: 400px;
+  height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-container {
+  position: relative;
+  height: 400px;
+  margin-top: 15vh;
+}
+
+.pic-container > img {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  animation: display 10s infinite;
+  margin-bottom: 30px;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+img:nth-child(6) {
+  animation-delay: 10s;
+}
+img:nth-child(7) {
+  animation-delay: 10s;
+}
+img:nth-child(8) {
+  animation-delay: 10s;
+}
+img:nth-child(9) {
+  animation-delay: 16s;
+}
+img:nth-child(10) {
+  animation-delay: 18s;
+}
+
+/* ---PAGE-INTEGRANTES--- */
+
+.pelao {
+  -webkit-filter: grayscale(1); /* Webkit */
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* W3C */
+}
+
+.formacion {
+  width: 100%;
+  height: 250vh;
+  margin-top: 30px;
+  background-color: rgb(255, 0, 0);
+  display: grid;
+  grid-template-areas:
+    "leo pedro david"
+    "pelao pc mou";
+  row-gap: 25px; /* Genera margenes en grd*/
+  column-gap: 15px;
+}
+
+.formacion div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cont-formacion h3 {
+  width: 100%;
+}
+
+.formacion div h3 {
+  font-size: 0;
+}
+
+.formacion div:hover {
+  transform: scale(1.05, 1.05);
+  color: white;
+}
+
+/* .formacion {
+    height: 250vh;
+    /* position:relative;  
+    transition: 2s;
+    
+    
+} */
+
+.formacion div h3 {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.566);
+  /* color: white; */
+  width: 100%;
+  font-size: 18px;
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+.leo {
+  grid-area: leo;
+}
+.pedro {
+  grid-area: pedro;
+}
+.david {
+  grid-area: david;
+}
+.pelao {
+  grid-area: pelao;
+}
+.pc {
+  grid-area: pc;
+}
+.mou {
+  grid-area: mou;
+}
+
+.integrantes {
+  display: grid;
+  margin-top: 30px;
+
+  width: 100vw;
+  grid-template-areas:
+    "singer"
+    "guit1"
+    "guit2"
+    "bass"
+    "keys"
+    "drums";
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.singer {
+  grid-area: singer;
+}
+.guit1 {
+  grid-area: guit1;
+}
+.guit2 {
+  grid-area: guit2;
+}
+.bass {
+  grid-area: keys;
+}
+.keys {
+  grid-area: keys;
+}
+.drums {
+  grid-area: drums;
+}
+
+.integrantes h4 {
+  text-align: center;
+  margin-top: 50px;
+}
+.integrantes div p {
+  text-align: justify;
+  margin-left: 200px;
+}
+
+/* ---FOOTER--- */
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.698);
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.spot:hover {
+  color: rgb(53, 236, 53);
+}
+
+.face:hover {
+  color: rgb(0, 42, 255);
+  text-shadow: 0.01px white;
+  -webkit-text-stroke: 0.01px rgba(255, 255, 255, 0.846);
+}
+
+/* ***MEDIA QUERIES*** */
+
+@media screen and (max-width: 1120px) {
+  .formacion {
+    grid-template-areas:
+      "leo pedro"
+      "david pelao"
+      "pc mou";
+    height: 350vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .formacion {
+    grid-template-areas:
+      "leo"
+      "pedro"
+      "david"
+      "pelao"
+      "pc"
+      "mou";
+    width: 300px;
+    height: 358vh;
+  }
+
+  .cont-formacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .formacion div img {
+    width: 300px;
+    height: 100%;
+  }
+
+  /* .grid-cont a img{
+        width: 600px;
+        height: 600px;
+        background-size: contain;
+    } */
+}
+
+@media screen and (max-width: 740px) {
+  .hero div h1 {
+    font-size: 60px;
+    font-weight: 400;
+  }
+
+  .integrantes div h4,
+  p {
+    font-size: 10px;
+  }
+  .formacion {
+    height: 371vh;
+  }
+  .formacion div img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    height: 40vh;
+    background-size: contain;
+  }
+
+  .cont-formacion h3 {
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .integrantes {
+    width: 75vw;
+  }
+
+  .formacion {
+    margin-top: 0px;
+  }
+
+  .integrantes div h4,
+  p {
+    font-size: 10px;
+    text-align: center;
+  }
+  .int-cont {
+    width: 600px;
+    height: 100%;
+    margin: 0;
+  }
+
+  .par {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .par {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header nav {
+    height: 70px;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    margin: 0;
+  }
+
+  header nav ul li a {
+    font-size: 10px;
+  }
+
+  header nav img {
+    width: 100px;
+    height: fit-content;
+  }
+
+  .hero {
+    height: 30vh;
+    background-size: contain;
+  }
+
+  .hero div h1 {
+    font-size: 40px;
+    font-weight: 100;
+  }
+
+  .hero div p {
+    font-size: 13px;
+  }
+
+  .hero div h1:hover {
+    font-size: 41px;
+    /* color: rgba(255, 255, 255, 0.612); */
+  }
+
+  .discografia h3 {
+    font-size: 25px;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .discos {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+    margin-top: 0px;
+  }
+  .grid-cont p {
+    text-align: center;
+  }
+
+  .pic-container {
+    height: 309px;
+    width: 330px;
+    margin-top: 1vh;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 15px;
+  }
+}

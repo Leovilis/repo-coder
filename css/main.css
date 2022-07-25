@@ -384,6 +384,7 @@ img:nth-child(10) {
 
 /* ***MEDIA QUERIES*** */
 
+/* PANTALLA DE MONITOR */
 @media screen and (max-width: 1120px) {
   .formacion {
     grid-template-areas:
@@ -394,6 +395,7 @@ img:nth-child(10) {
   }
 }
 
+/* PANTALLA DE TABLET GRANDE */
 @media screen and (max-width: 900px) {
   .formacion {
     grid-template-areas:
@@ -419,13 +421,9 @@ img:nth-child(10) {
     height: 100%;
   }
 
-  /* .grid-cont a img{
-        width: 600px;
-        height: 600px;
-        background-size: contain;
-    } */
 }
 
+/* PANTALLA DE TABLET MEDIANA */
 @media screen and (max-width: 740px) {
   .hero div h1 {
     font-size: 60px;
@@ -487,12 +485,15 @@ img:nth-child(10) {
   }
 }
 
+/* PANTALLA DE CELULAR */
 @media screen and (max-width: 530px) {
   .par {
     font-size: 7px;
   }
 }
 
+
+/* PANTALLA MINIMA */
 @media screen and (max-width: 420px) {
   header nav {
     height: 70px;
